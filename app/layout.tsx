@@ -28,7 +28,8 @@ export const metadata: Metadata = {
   title: "Coco Studio",
   description: "Landscape consulting and design",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/logo.png",
+    apple: "/logo.png",
   },
 };
 

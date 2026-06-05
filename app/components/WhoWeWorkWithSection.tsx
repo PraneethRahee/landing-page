@@ -112,9 +112,7 @@ export default function WhoWeWorkWithSection() {
                   fontSize: "20px",
                   letterSpacing: "0px",
                   color: "#D3BA8B",
-                  marginBottom: "12px",
-                  margin: 0,
-                  marginBottom: "12px",
+                  margin: "0 0 12px 0",
                   verticalAlign: "middle",
                 }}
               >

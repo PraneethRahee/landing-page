@@ -161,13 +161,15 @@ export default function OurWorkSection() {
             }}
           >
             {/* Left Content */}
-            <div style={{ flex: "0 0 clamp(250px, 25vw, 350px)" }}>
+            <div style={{ flex: "0 0 clamp(300px, 35vw, 500px)" }}>
               <p
                 style={{
                   fontFamily: "var(--font-funnel)",
-                  fontWeight: 400,
-                  fontSize: "12px",
-                  letterSpacing: "1px",
+                  fontWeight: 500,
+                  fontSize: "24px",
+                  lineHeight: "120%",
+                  letterSpacing: "0px",
+                  verticalAlign: "middle",
                   color: currentIndex % 2 === 0 ? "#D4AF87" : "#FAF6F1",
                   marginBottom: "12px",
                   textTransform: "uppercase",
@@ -184,11 +186,11 @@ export default function OurWorkSection() {
                 style={{
                   fontFamily: "var(--font-bricolage)",
                   fontWeight: 500,
-                  fontSize: "24px",
+                  fontSize: "38px",
                   lineHeight: "120%",
                   letterSpacing: "0px",
                   verticalAlign: "middle",
-                  color: currentIndex % 2 === 0 ? "#666666" : "#E0E0E0",
+                  color: currentIndex % 2 === 0 ? "var(--Colors-Neutral-600, #758195)" : "#E0E0E0",
                   transition: "color 0.5s ease",
                   margin: 0,
                 }}
@@ -198,15 +200,18 @@ export default function OurWorkSection() {
             </div>
 
             {/* Right: Image */}
-            <div style={{ flex: "1", minHeight: "400px" }}>
+            <div style={{ flex: "1", aspectRatio: "16/10", overflow: "hidden", borderRadius: "8px" }}>
               <img
                 src={`/${project.image}`}
                 alt={project.title}
+                width={960}
+                height={600}
                 style={{
                   width: "100%",
                   height: "100%",
                   objectFit: "cover",
-                  borderRadius: "8px",
+                  objectPosition: "center",
+                  display: "block",
                 }}
               />
             </div>

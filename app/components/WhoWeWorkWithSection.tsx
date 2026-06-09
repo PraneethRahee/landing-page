@@ -1,10 +1,10 @@
 "use client";
 
 const cards = [
-  { id: 1, image: "wework-1.jpg", label: "Now Available", title: "Villas & Residences" },
-  { id: 2, image: "wework-2.jpg", label: "Coming Soon", title: "Cafes & Hospitality" },
-  { id: 3, image: "wework-3.jpg", label: "Coming Soon", title: "Wellness & Retreats" },
-  { id: 4, image: "wework-4.jpg", label: "Coming Soon", title: "Corporate Spaces" },
+  { id: 1, image: "wework-1.webp", label: "Now Available", title: "Villas & Residences" },
+  { id: 2, image: "wework-2.webp", label: "Coming Soon", title: "Cafes & Hospitality" },
+  { id: 3, image: "wework-3.webp", label: "Coming Soon", title: "Wellness & Retreats" },
+  { id: 4, image: "wework-4.webp", label: "Coming Soon", title: "Corporate Spaces" },
 ];
 
 export default function WhoWeWorkWithSection() {
@@ -25,10 +25,12 @@ export default function WhoWeWorkWithSection() {
         <h2
           style={{
             fontFamily: "var(--font-bricolage)",
-            fontWeight: 600,
-            fontSize: "clamp(40px, 5vw, 60px)",
-            lineHeight: "100%",
-            letterSpacing: "-2px",
+            fontWeight: 500,
+            fontSize: "clamp(36px, 5vw, 60px)",
+            lineHeight: "120%",
+            letterSpacing: "0px",
+            textAlign: "center",
+            verticalAlign: "middle",
             color: "var(--Colors-Primary-500, #203F2B)",
             marginBottom: "16px",
           }}
@@ -39,9 +41,10 @@ export default function WhoWeWorkWithSection() {
           style={{
             fontFamily: "var(--font-funnel)",
             fontWeight: 400,
-            fontSize: "22px",
+            fontSize: "24px",
             lineHeight: "120%",
             letterSpacing: "0px",
+            verticalAlign: "middle",
             color: "var(--Colors-Neutral-600, #758195)",
           }}
         >
@@ -76,6 +79,10 @@ export default function WhoWeWorkWithSection() {
             <img
               src={`/${card.image}`}
               alt={card.title}
+              width={800}
+              height={480}
+              loading="lazy"
+              decoding="async"
               style={{
                 position: "absolute",
                 top: 0,

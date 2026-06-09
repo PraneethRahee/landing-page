@@ -6,7 +6,26 @@ export default function ContactFormSection() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const formRef = useRef<HTMLFormElement>(null);
 
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true);
+
+  // Pause video when scrolled out of view, resume when back in view
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          video.play().then(() => setIsPlaying(true)).catch(() => {});
+        } else {
+          video.pause();
+          setIsPlaying(false);
+        }
+      },
+      { threshold: 0.25 }
+    );
+    observer.observe(video);
+    return () => observer.disconnect();
+  }, []);
 
   const [formData, setFormData] = useState({
     name: "",
@@ -201,7 +220,9 @@ export default function ContactFormSection() {
             {/* Project Type and Location */}
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
               {/* Project Type */}
+              <label htmlFor="projectType" style={{ display: "contents" }}>
               <select
+                id="projectType"
                 name="projectType"
                 value={formData.projectType}
                 onChange={handleChange}
@@ -232,6 +253,7 @@ export default function ContactFormSection() {
                   </option>
                 ))}
               </select>
+              </label>
 
               {/* Location */}
               <input
@@ -354,6 +376,8 @@ export default function ContactFormSection() {
             src="/ContactUs.mp4"
             muted
             playsInline
+            loop
+            preload="none"
           />
 
           {/* Play/Pause Button */}

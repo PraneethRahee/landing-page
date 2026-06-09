@@ -9,7 +9,7 @@ export default function HeroSection() {
         backgroundImage: "url('/hero-bg.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
-        backgroundAttachment: "fixed",
+        backgroundAttachment: "scroll",
       }}
     >
       {/* Header */}
@@ -29,8 +29,10 @@ export default function HeroSection() {
         {/* Left: Logo */}
         <div className="flex items-center gap-3 flex-shrink-0">
           <img
-            src="/logo.png"
+            src="/logo.webp"
             alt="Coco Studio"
+            width={56}
+            height={56}
             style={{
               height: "56px",
               width: "auto",
@@ -107,6 +109,8 @@ export default function HeroSection() {
           <img
             src="/Vector.svg"
             alt="arrow"
+            width={12}
+            height={12}
             className="absolute"
             style={{
               top: "50%",

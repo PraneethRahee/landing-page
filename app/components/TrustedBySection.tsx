@@ -2,23 +2,23 @@
 
 const logos = [
   "Accion Labs Logo.png",
-  "Adarsh Palm Retreat Villas Logo.jpg",
-  "Arbor Brewing logo.jpg",
-  "Big Pitcher Logo.png",
+  "Adarsh Palm Retreat Villas Logo.webp",
+  "Arbor Brewing logo.webp",
+  "Big Pitcher Logo.webp",
   "Biggies-Burger logo.png",
-  "Candela Labs logo.png",
-  "Capitalmind logo.png",
-  "Chianti Ristorante Logo.png",
+  "Candela Labs logo.webp",
+  "Capitalmind logo.webp",
+  "Chianti Ristorante Logo.webp",
   "Darwin Box Logo.png",
   "Duroflex logo.png",
-  "Enrich Salons logo.png",
-  "INDFRAG logo.png",
-  "Moonraft Innovation Labs logo.png",
-  "Prestige Group Logo.png",
-  "Sante Spa Cuisine logo.jpg",
+  "Enrich Salons logo.webp",
+  "INDFRAG logo.webp",
+  "Moonraft Innovation Labs logo.webp",
+  "Prestige Group Logo.webp",
+  "Sante Spa Cuisine logo.webp",
   "Speckles Developers Logo.jpg",
-  "Walmart Logo.png",
-  "What the Ale Logo.png",
+  "Walmart Logo.webp",
+  "What the Ale Logo.webp",
   "art park logo.png",
 ];
 
@@ -85,6 +85,9 @@ export default function TrustedBySection() {
               <img
                 src={`/trustedpatners/${logo}`}
                 alt={logo}
+                width={160}
+                height={80}
+                loading="lazy"
                 style={{
                   width: "160px",
                   height: "80px",
@@ -110,6 +113,9 @@ export default function TrustedBySection() {
               <img
                 src={`/trustedpatners/${logo}`}
                 alt={logo}
+                width={160}
+                height={80}
+                loading="lazy"
                 style={{
                   width: "160px",
                   height: "80px",

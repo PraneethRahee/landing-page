@@ -89,8 +89,10 @@ export default function FooterSection() {
               {/* Logo + name */}
               <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "16px" }}>
                 <img
-                  src="/logo.png"
+                  src="/logo.webp"
                   alt="Coco Studio"
+                  width={40}
+                  height={40}
                   style={{ height: "40px", width: "auto" }}
                 />
                 <span
@@ -216,7 +218,7 @@ export default function FooterSection() {
             <span>Coc</span>
             <span
               style={{
-                backgroundImage: "url('/insideO.jpg')",
+                backgroundImage: "url('/insideO.webp')",
                 backgroundSize: "cover",
                 backgroundPosition: "center",
                 WebkitBackgroundClip: "text",

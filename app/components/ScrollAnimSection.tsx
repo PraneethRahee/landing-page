@@ -7,7 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const IMAGE_CONFIGS = [
-  // ── PHASE A  (Quote 1 — "We don't start with Pinterest boards…") ─────────
+  // ── PHASE A  (Quote 1 — "We assess your space…") ─────────────────────
   {
     src: "/scroll-animation/1.webp",     // vertical garden building — top-left
     css: { left: "0%",  top: "2%",  width: "clamp(170px, 26vw, 500px)" },
@@ -44,7 +44,7 @@ const IMAGE_CONFIGS = [
     c: { y: -75, scale: 0.92, opacity: 0    },
   },
 
-  // ── PHASE B  (Quote 2 — "One point of contact, daily updates…") ──────────
+  // ── PHASE B  (Quote 2 — "One point of contact…") ──────────────────────
   {
     src: "/scroll-animation/6.webp",     // snake plant interior — top-center-left
     css: { left: "24%", top: "4%",  width: "clamp(165px, 25vw, 475px)" },
@@ -81,7 +81,7 @@ const IMAGE_CONFIGS = [
     c: { y: -70, scale: 0.90, opacity: 0    },
   },
 
-  // ── PHASE C  (Quote 3 — "When the work is done…") ────────────────────────
+  // ── PHASE C  (Quote 3 — "When the work is done…") ────────────────────
   {
     src: "/scroll-animation/5.webp",     // Italian formal garden — top-left
     css: { left: "1%",  top: "4%",  width: "clamp(175px, 26vw, 500px)" },
@@ -271,6 +271,7 @@ export default function ScrollAnimSection() {
               letterSpacing: "-2px",
               color: "#F0EAD6",
               margin: 0,
+              textShadow: "0 2px 20px rgba(0,0,0,0.7), 0 0 40px rgba(32,63,43,0.9)",
             }}
           >
             {q}

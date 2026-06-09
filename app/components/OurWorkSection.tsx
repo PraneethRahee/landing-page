@@ -48,8 +48,14 @@ const projects = [
   {
     id: 8,
     title: "GARDEN WALK",
-    description: "A walk that makes you realize you have nowhere else to be.",
+    description: "A garden you discover rather than arrive at.",
     image: "Container-8.webp",
+  },
+  {
+    id: 9,
+    title: "STONE GARDEN",
+    description: "Restraint, when it is this considered, speaks louder than abundance.",
+    image: "Container-9.webp",
   },
 ];
 
